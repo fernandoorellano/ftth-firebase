@@ -1,7 +1,7 @@
-<div class="contenedor" *ngIf="listadoServ.mensajePagoActual != ''">
+<div class="contenedor" *ngIf="listadoServ.mensajePagoAnteriores != ''">
     <div class="row">
         <div class="col">
-            <p>ID DE PAGOS FALTANTES: </p>
+            <p>ID DE PAGOS FALTANTES: ({{listadoServ.mensajePagoAnteriores.length}}).</p>
         </div>
         <div class="col fechas">
             <p *ngFor="let item of listadoServ.mensajePagoAnteriores">
@@ -9,7 +9,7 @@
             </p>
         </div>
     </div>
-
+<!--
     <div class="row">
         <div class="col">
             <p>Hoy {{fechaActual | date: "dd-MM-yyyy"}} le toca abonar a </p>
@@ -20,6 +20,7 @@
             </p>
         </div>
     </div>
+    -->
 </div>
 <div class="contenedor" *ngIf="listadoServ.mensajePagoFuturo != ''">
     <div class="row">

@@ -35,7 +35,7 @@
        font-size: 12px;
     }
 
-    .col-1 input{
+    .col-1 span{
        font-size: 12px;
     }
 
@@ -54,7 +54,7 @@
         font-size: 12px;
     }
 
-    .col input{
+    .col span{
     font-size: 12px;
     }
     .col-2 p{
@@ -63,7 +63,7 @@
         justify-content: center;
          font-size: 12px;
     }
-    .col-2 input{
+    .col-2 span{
         font-size: 12px;
     }
     .btns{
@@ -82,7 +82,7 @@
     width: 14vw;
 }
 
-.col input{
+.col span{
     width: 100%;
 }
 

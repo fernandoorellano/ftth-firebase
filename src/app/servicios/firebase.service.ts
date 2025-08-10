@@ -19,7 +19,7 @@ export class FirebaseService {
    }
 
    obtenerDatos(){
-    return this.afs.collection('/abonados', ref => ref.orderBy('identificador', 'asc')).snapshotChanges();
+    return this.afs.collection('/abonados', ref => ref.orderBy('fecha', 'asc')).snapshotChanges();
    }
 
    eliminarDatos(abonado: Abonado){
