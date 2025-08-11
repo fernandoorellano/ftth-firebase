@@ -12,6 +12,7 @@ export class CrearComponent implements OnInit {
 
 
    loginForm= new FormGroup({
+      identificador: new FormControl(''),
       descripcion: new FormControl(''),
       fecha: new FormControl(''),
       pon: new FormControl(''),
@@ -27,11 +28,12 @@ export class CrearComponent implements OnInit {
 
   onLogin(){
     const nuevoAbonado: Abonado = {
+      identificador: this.loginForm.value.identificador,
       descripcion: this.loginForm.value.descripcion,
       fecha: this.loginForm.value.fecha,
       pon: this.loginForm.value.pon,
-      pagoMayo: "",
-      pagoJunio: "",
+      pagoMayo: "p",
+      pagoJunio: "p",
       pagoJulio: this.loginForm.value.pagoJulio,
       pagoAgosto: this.loginForm.value.pagoAgosto,
       pagoSeptiembre: "",

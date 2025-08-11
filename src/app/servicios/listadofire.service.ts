@@ -31,7 +31,6 @@ export class ListadofireService {
     }
   
     crearAbonado(nuevoAbonado: any){
-      nuevoAbonado.identificador = this.abonado.length+1;
       this.data.crearDatos(nuevoAbonado);
     }
   

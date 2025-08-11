@@ -9,7 +9,9 @@
             </p>
         </div>
     </div>
-<!--
+</div>
+
+<div class="contenedor" *ngIf="listadoServ.mensajePagoActual != ''">
     <div class="row">
         <div class="col">
             <p>Hoy {{fechaActual | date: "dd-MM-yyyy"}} le toca abonar a </p>
@@ -20,8 +22,8 @@
             </p>
         </div>
     </div>
-    -->
 </div>
+
 <div class="contenedor" *ngIf="listadoServ.mensajePagoFuturo != ''">
     <div class="row">
         <div class="col">
