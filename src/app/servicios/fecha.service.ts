@@ -7,6 +7,7 @@
 
     fecha : any = new Date();
     fechaDiaActualNumerica = this.fecha.getDate();
+    fechaMesActualNumerica = this.fecha.getMonth()+1;
 
     mensajePagoActual : any = [];
     mensajePagoAnteriores : any = [];
@@ -21,26 +22,22 @@
 
     calculoDiaRestante(datos: any){
       for (let index = 0; index < datos.length; index++) {
-        if((datos[index].fecha.slice(0, 2) == this.fechaDiaActualNumerica) && (datos[index].pagoAgosto != "p") ){
-          /**let mensaje = "ID_"+datos[index].identificador+"("+datos[index].fecha+")."; */
-          let mensaje = datos[index].descripcion+"("+datos[index].fecha+").";
+        let diaNumerico = datos[index].fecha.slice(0, 2);
+        let resultadoDiferencia = diaNumerico - this.fechaDiaActualNumerica;
+
+        if((diaNumerico == this.fechaDiaActualNumerica) && (datos[index].pagoAgosto != "P" || datos[index].pagoAgosto != "p") ){
+          let mensaje = datos[index].descripcion+" - ("+datos[index].fecha+").";
           this.mensajePagoActual.push(mensaje);
         }
-        if(((datos[index].fecha.slice(0, 2) - this.fechaDiaActualNumerica) >= 1) && ((datos[index].fecha.slice(0, 2) - this.fechaDiaActualNumerica) <= 2) && (datos[index].pagoAgosto != "p") ){
-          /*let mensaje = "ID_"+datos[index].identificador+"(QUEDA "+ (datos[index].fecha.slice(0, 2) - this.fechaDiaActualNumerica)+" DIA).";*/
-          let mensaje = datos[index].descripcion+"("+datos[index].fecha+").";
+        if((resultadoDiferencia >= 1) && (resultadoDiferencia <= 2) && (datos[index].pagoAgosto != "P" || datos[index].pagoAgosto != "p") ){
+          let mensaje = datos[index].descripcion+" - ("+datos[index].fecha+").";
           this.mensajePagoFuturo.push(mensaje);
         }
-        if(((this.fechaDiaActualNumerica - datos[index].fecha.slice(0, 2)) > 0) && ((this.fechaDiaActualNumerica - datos[index].fecha.slice(0, 2)) <= 1) && (datos[index].pagoAgosto != "p") ){
-          /*let mensaje = "ID_"+datos[index].identificador+"(QUEDA "+ (datos[index].fecha.slice(0, 2) - this.fechaDiaActualNumerica)+" DIA).";*/
-          let mensaje = datos[index].descripcion+"("+datos[index].fecha+").";          
+        if((resultadoDiferencia < 0 &&  datos[index].pagoAgosto != "P" && datos[index].pagoAgosto != "p")){
+          let mensaje = datos[index].descripcion+" - ("+datos[index].fecha+").";          
           this.mensajePagoAnteriores.push(mensaje);
         }
-        if(((this.fechaDiaActualNumerica - datos[index].fecha.slice(0, 2)) > 1) && (datos[index].pagoAgosto != "p") ){
-          /*let mensaje = "ID_"+datos[index].identificador+"(QUEDA "+ (datos[index].fecha.slice(0, 2) - this.fechaDiaActualNumerica)+" DIA).";*/
-          let mensaje = datos[index].descripcion+"("+datos[index].fecha+").";          
-          this.mensajePagoAnteriores.push(mensaje);
-        }
+        
       }
     }
 

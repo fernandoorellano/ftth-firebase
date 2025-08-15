@@ -1,11 +1,12 @@
 <div class="contenedor" *ngIf="listadoServ.mensajePagoAnteriores != ''">
     <div class="row">
-        <div class="col">
+    
             <p>ID DE PAGOS FALTANTES: ({{listadoServ.mensajePagoAnteriores.length}}).</p>
-        </div>
+     
         <div class="col fechas">
             <p *ngFor="let item of listadoServ.mensajePagoAnteriores">
-                {{item}}
+                <u>{{item}}</u>
+                
             </p>
         </div>
     </div>

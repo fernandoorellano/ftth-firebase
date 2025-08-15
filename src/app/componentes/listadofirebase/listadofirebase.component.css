@@ -1,11 +1,10 @@
-.fechas{
-    display: inline;
+.container{
+    height: 50vh;
+    overflow: auto;
 }
-
 .contenedor{
     display: flex;
     justify-content: center;
-    align-items:center;
 }
 
 .row{
@@ -17,77 +16,50 @@
     display: flex;
     border: 1px solid black;
     justify-content: center;
+    text-align: center;
 }
 
 .col-1{
-    width: 6vw;
+    width: 3vw;
+    text-align: center;
 }
 
-@media (max-width: 1400px){
-    .row{
-        width: 100vw;
-        margin: 0;
-        padding: 0;
-    }
-    .col-1{
-        width: 5vw;
-        padding: 1px;
-       font-size: 12px;
-    }
-
-    .col-1 span{
-       font-size: 12px;
-    }
-
-    .col-2{
-        padding: 1px;
-        min-width: 20vw;
-    }
-    .col-1 p{
-        writing-mode: vertical-lr;
-        display: flex;
-        justify-content: center;
-        font-size: 14px;
-    }
-
-    .col{
-        font-size: 12px;
-    }
-
-    .col span{
-    font-size: 12px;
-    }
-    .col-2 p{
-        writing-mode: vertical-lr;
-        display: flex;
-        justify-content: center;
-         font-size: 12px;
-    }
-    .col-2 span{
-        font-size: 12px;
-    }
-    .btns{
-        flex-direction: column;
-    }
-    .col button{
-        font-size: 9px;
-        width: 15px;
-        height: 17px;
-        display: flex;
-        justify-content: center;
-    }
+.col-1 p{
+    writing-mode: vertical-lr;
+    font-size: 14px;
+    padding: 0;
+    margin: 0;
 }
 
 .col-2{
-    width: 14vw;
+    width: 17vw;
+    text-align: center;
 }
 
 .col span{
     width: 100%;
 }
 
+ p{
+        font-size: 12px;
+    }
 
-
-.btns{
-    display: flex;
+@media (min-width: 60px) and (max-width: 920px){
+    .container{
+        min-width: 100vw;
+    }
+    .col-1{
+        width: 4vw;
+    }
+    .col-2{
+        width: 26vw;
+    }
+    p{
+        font-size: 10px;
+    }
+    span{
+        font-size: 10px;
+    }
 }
+
+ 
