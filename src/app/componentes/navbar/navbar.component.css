@@ -1,0 +1,29 @@
+@media (min-width: 300px) and (max-width: 1000px){
+    nav{
+        border-bottom: 1px solid rgb(162, 162, 162);
+        margin-bottom: 10px;
+    }
+
+    button{ 
+        height: 20px;
+        border: none;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    
+    span{
+        height: 20px;
+        width: 20px;
+    }
+
+    .navbar-toggler:focus {
+        text-decoration: none;
+        outline: 0;
+        box-shadow: none;
+    }
+
+    a{
+        font-size: 12px;
+    }
+}

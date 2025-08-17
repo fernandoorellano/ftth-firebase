@@ -1,102 +1,83 @@
 <div class="container">
-    <div class="contenedor">
-        <div class="row">
-            <div class="col col-1">
-                <p>ID</p>
-            </div>
-            <div class="col col-2">
-                <p>Descripcion</p>
-            </div>
-            <div class="col col-1">
-                <p>Dia</p>
-            </div>
-            <div class="col col-2">
-                <p>Fecha de inicio</p>
-            </div>
-            <div class="col col-1">
-                <p>PON</p>
-            </div>
-            <div class="col col-1">
-                <p>Mayo</p>
-            </div>
-            <div class="col col-1">
-                <p>Junio</p>
-            </div>
-            <div class="col col-1">
-                <p>Julio</p>
-            </div>
-            <div class="col col-1">
-                <p>Agost</p>
-            </div>
-            <div class="col col-1">
-                <p>Sept</p>
-            </div>
-            <div class="col col-1">
-                <p>Oct</p>
-            </div>
-            <div class="col col-1">
-                <p>Nov</p>
-            </div>
-            <div class="col col-1">
-                <p>Dic</p>
-            </div>
-            <!--<div class="col col-1">
-                <p>Guardar/Eliminar</p>
-            </div>-->
+<div class="contenedor">
+    <div class="row">
+        <div class="col col-1">
+             <p>ID</p>
+        </div>
+           <div class="col col-2">
+             <p>Descripcion</p>
+        </div>
+           <div class="col col-2">
+             <p>Fecha de inicio</p>
+        </div>
+          <div class="col col-1">
+             <p>PON</p>
+        </div>
+        <div class="col col-1">
+             <p>Mayo</p>
+        </div>
+         <div class="col col-1">
+             <p>Junio</p>
+        </div>
+        <div class="col col-1">
+             <p>Julio</p>
+        </div>
+        <div class="col col-1">
+             <p>Agost</p>
+        </div>
+          <div class="col col-1">
+             <p>Sept</p>
+        </div>
+        <div class="col col-1">
+             <p>Oct</p>
+        </div>
+        <div class="col col-1">
+             <p>Nov</p>
+        </div>
+        <div class="col col-1">
+             <p>Dic</p>
         </div>
     </div>
+</div>
 
-    <div class="contenedor" *ngFor="let item of listadoFireServ.abonado">
-        <div class="row">
-            <div class="col col-1">
-                <span>{{item.identificador}}</span>
-            </div>
-            <div class="col col-2">
-                <span>{{item.descripcion}}</span>
-            </div>
-            <div class="col col-1">
-                <span>{{item.fecha.slice(0, 2)}}</span>
-            </div>
-            <div class="col col-2">
-                <span>{{item.fecha}}</span>
-            </div>
-            <div class="col col-1">
-                <span>{{item.pon}}</span>
-            </div>
-            <div class="col col-1">
-                <span>{{item.pagoMayo}}</span>
-            </div>
-            <div class="col col-1">
-                <span>{{item.pagoJunio}}</span>
-            </div>
-            <div class="col col-1">
-                <span>{{item.pagoJulio}}</span>
-            </div>
-            <div class="col col-1">
-                <span>{{item.pagoAgosto}}</span>
-            </div>
-            <div class="col col-1">
-                <span>{{item.pagoSeptiembre}}</span>
-            </div>
-            <div class="col col-1">
-                <span>{{item.pagoOctubre}}</span>
-            </div>
-            <div class="col col-1">
-                <span>{{item.pagoNoviembre}}</span>
-            </div>
-            <div class="col col-1">
-                <span>{{item.pagoDiciembre}}</span>
-            </div>
-            <!--<div class="col col-1">
-                <div class="btns">
-                    <button (click)="listadoFireServ.update(item)">
-                    ok
-                    </button>
-                    <button (click)="listadoFireServ.deleteStuden(item)">
-                    x
-                    </button>
-                </div>
-            </div>-->
+<div class="contenedor" *ngFor="let item of listadoFireServ.abonado">
+    <div class="row">
+        <div class="col col-1">
+            <span>{{item.identificador}}</span>
+        </div>
+          <div class="col col-2">
+            <span>{{item.descripcion}}</span>
+        </div>
+        <div class="col col-2">
+            <span>{{item.fecha}}</span>
+        </div>
+        <div class="col col-1">
+            <span>{{item.pon}}</span>
+        </div>
+        <div class="col col-1">
+            <span>{{item.pagoMayo}}</span>
+        </div>
+        <div class="col col-1">
+            <span>{{item.pagoJunio}}</span>
+        </div>
+        <div class="col col-1">
+            <span>{{item.pagoJulio}}</span>
+        </div>
+        <div class="col col-1">
+            <span>{{item.pagoAgosto}}</span>
+        </div>
+        <div class="col col-1">
+            <span>{{item.pagoSeptiembre}}</span>
+        </div>
+        <div class="col col-1">
+            <span>{{item.pagoOctubre}}</span>
+        </div>
+        <div class="col col-1">
+            <span>{{item.pagoNoviembre}}</span>
+        </div>
+        <div class="col col-1">
+            <span>{{item.pagoDiciembre}}</span>
         </div>
     </div>
+</div>
 </div>
