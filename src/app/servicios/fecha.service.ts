@@ -1,4 +1,6 @@
   import { Injectable } from '@angular/core';
+  import { DatePipe } from '@angular/common';
+
 
   @Injectable({
     providedIn: 'root'
@@ -22,7 +24,8 @@
 
     calculoDiaRestante(datos: any){
       for (let index = 0; index < datos.length; index++) {
-        let diaNumerico = datos[index].fecha.slice(0, 2);
+       let diaNumerico = datos[index].fecha.slice(0, 2);
+        datos[index].fecha = datos[index].fecha.slice(0, 2)+'-'+datos[index].fecha.slice(2, 4)+"-"+datos[index].fecha.slice(4, 6)
         let resultadoDiferencia = diaNumerico - this.fechaDiaActualNumerica;
 
         if((diaNumerico == this.fechaDiaActualNumerica) && (datos[index].pagoAgosto != "P" || datos[index].pagoAgosto != "p") ){
@@ -37,7 +40,7 @@
           let mensaje = datos[index].descripcion+" - ("+datos[index].fecha+").";          
           this.mensajePagoAnteriores.push(mensaje);
         }
-        
+       
       }
     }
 

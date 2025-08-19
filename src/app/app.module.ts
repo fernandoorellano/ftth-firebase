@@ -17,6 +17,7 @@ import { CrearComponent } from './paginas/crear/crear.component';
 import { EdicionComponent } from './paginas/edicion/edicion.component';
 import { InicioComponent } from './paginas/inicio/inicio.component';
 import { ListadoComponent } from './paginas/listado/listado.component';
+import { ListadoFaltantesComponent } from './componentes/listado-faltantes/listado-faltantes.component';
 
 @NgModule({
   declarations: [
@@ -27,7 +28,8 @@ import { ListadoComponent } from './paginas/listado/listado.component';
     CrearComponent,
     EdicionComponent,
     InicioComponent,
-    ListadoComponent
+    ListadoComponent,
+    ListadoFaltantesComponent
   ],
   imports: [
     BrowserModule,

@@ -2,46 +2,49 @@
 <div class="contenedor">
     <div class="row">
         <div class="col col-1">
-             <p>ID</p>
-        </div>
-           <div class="col col-2">
-             <p>Descripcion</p>
-        </div>
-           <div class="col col-2">
-             <p>Fecha de inicio</p>
-        </div>
-          <div class="col col-1">
-             <p>PON</p>
+             <p></p>
         </div>
         <div class="col col-1">
-             <p>Mayo</p>
+             <p><b>ID</b></p>
+        </div>
+           <div class="col col-2">
+             <p><b>Desc.</b></p>
+        </div>
+           <div class="col col-2">
+             <p><b>Fecha</b></p>
+        </div>
+          <div class="col col-1">
+             <p><b>PON</b></p>
         </div>
          <div class="col col-1">
-             <p>Junio</p>
+             <p><b>Junio</b></p>
         </div>
         <div class="col col-1">
-             <p>Julio</p>
+             <p><b>Julio</b></p>
         </div>
         <div class="col col-1">
-             <p>Agost</p>
+             <p><b>Agost</b></p>
         </div>
           <div class="col col-1">
-             <p>Sept</p>
+             <p><b>Sept</b></p>
         </div>
         <div class="col col-1">
-             <p>Oct</p>
+             <p><b>Oct</b></p>
         </div>
         <div class="col col-1">
-             <p>Nov</p>
+             <p><b>Nov</b></p>
         </div>
         <div class="col col-1">
-             <p>Dic</p>
+             <p><b>Dic</b></p>
         </div>
     </div>
 </div>
 
-<div class="contenedor" *ngFor="let item of listadoFireServ.abonado">
+<div class="contenedor" *ngFor="let item of listadoFireServ.abonado, index as index">
     <div class="row">
+        <div class="col col-1">
+            <span><b>{{index+1}}</b></span>
+        </div>
         <div class="col col-1">
             <span>{{item.identificador}}</span>
         </div>
@@ -53,9 +56,6 @@
         </div>
         <div class="col col-1">
             <span>{{item.pon}}</span>
-        </div>
-        <div class="col col-1">
-            <span>{{item.pagoMayo}}</span>
         </div>
         <div class="col col-1">
             <span>{{item.pagoJunio}}</span>
