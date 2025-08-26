@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { FechaService } from 'src/app/servicios/fecha.service';
 import { ListadofireService } from 'src/app/servicios/listadofire.service';
 
 @Component({
@@ -8,7 +9,7 @@ import { ListadofireService } from 'src/app/servicios/listadofire.service';
 })
 export class ListadofirebaseComponent implements OnInit {
 
-  constructor(public listadoFireServ : ListadofireService) { }
+  constructor(public listadoFireServ : ListadofireService, public fechaServ: FechaService) { }
     
   
     ngOnInit(): void {
