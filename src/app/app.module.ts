@@ -38,7 +38,7 @@ import { ListadoFaltantesComponent } from './componentes/listado-faltantes/lista
     ReactiveFormsModule,
     HttpClientModule,
     AngularFirestoreModule,
-    AngularFireModule.initializeApp(environment.firebaseConfig),  
+    AngularFireModule.initializeApp(environment.firebaseConfig)
   ],
   providers: [],
   bootstrap: [AppComponent]

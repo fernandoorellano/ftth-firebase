@@ -23,23 +23,30 @@
       this.reiniciarCalculoDias()
       for (let index = 0; index < datos.length; index++) {
         let diaNumerico = datos[index].fecha.slice(0, 2);
-        let fechaCompleta = datos[index];
+        let mesNumerico = datos[index].fecha.slice(2, 4);
+        
         this.fechaNueva[index] = datos[index].fecha.slice(0, 2)+'-'+datos[index].fecha.slice(2, 4)+"-"+datos[index].fecha.slice(4, 6)
         
         let resultadoDiferencia = diaNumerico - this.fechaDiaActualNumerica;
+        let resultadoMesDiferencia = this.fechaMesActualNumerica - mesNumerico;
 
-        if((diaNumerico == this.fechaDiaActualNumerica) && (datos[index].pagoAgosto != "P" || datos[index].pagoAgosto != "p") ){
+        if((diaNumerico == this.fechaDiaActualNumerica) && (datos[index].pagoSeptiembre != "P" || datos[index].pagoSeptiembre != "p") ){
           let mensaje = datos[index].identificador+".-"+datos[index].descripcion+" - ("+this.fechaNueva[index]+").";
           this.mensajePagoActual.push(mensaje);
         }else
-        if((resultadoDiferencia >= 1) && (resultadoDiferencia <= 2) && (datos[index].pagoAgosto != "P" || datos[index].pagoAgosto != "p") ){
+        if((resultadoDiferencia >= 1) && (resultadoDiferencia <= 2) && (datos[index].pagoSeptiembre != "P" || datos[index].pagoSeptiembre != "p") ){
           let mensaje = datos[index].identificador+".-"+datos[index].descripcion+" - ("+this.fechaNueva[index]+").";
           this.mensajePagoFuturo.push(mensaje);
         }else
-        if((resultadoDiferencia < 0 &&  datos[index].pagoAgosto != "P" && datos[index].pagoAgosto != "p")){
+        if((resultadoDiferencia < 0 &&  datos[index].pagoSeptiembre != "P" && datos[index].pagoSeptiembre != "p")){
           let mensaje = datos[index].identificador+")."+datos[index].descripcion+" ---> ("+this.fechaNueva[index]+").";          
           this.mensajePagoAnteriores.push(mensaje);
-        }       
+        }
+        else
+        if((datos[index].pagoAgosto != "P" && datos[index].pagoAgosto != "p")){
+          let mensaje = datos[index].identificador+")."+datos[index].descripcion+" ---> ("+this.fechaNueva[index]+").";          
+          this.mensajePagoAnteriores.push(mensaje);
+        }  
       }
     }
 
