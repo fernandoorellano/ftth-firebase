@@ -23,6 +23,7 @@
 
 .col span{
     width: 100%;
+    text-align: center;
 }
 
 .col-1{
@@ -38,6 +39,10 @@ p{
     padding: 0;
 }
 
+.pagoStyle{
+    background-color: var(--bg-color);
+}
+
 @media (min-width:200px) and (max-width: 1000px){
     b{
         padding: 3px;
@@ -45,7 +50,7 @@ p{
     
     .col-1{
         width: 6vw;
-        font-size: 12px;
+        font-size: var(--tx-sm);
     }
 
     .col-2{
@@ -56,10 +61,10 @@ p{
         writing-mode: vertical-lr;
         display: flex;
         justify-content: center;
-         font-size: 12px;
+        font-size: var(--tx-sm);
     }
 
     span{
-        font-size: 12px;
+        font-size: var(--tx-sm);
     }
 }

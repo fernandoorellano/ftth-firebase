@@ -16,8 +16,7 @@ export class CrearComponent implements OnInit {
       descripcion: new FormControl(''),
       fecha: new FormControl(''),
       pon: new FormControl(''),
-      pagoJulio: new FormControl(''),
-      pagoAgosto: new FormControl(''),
+      pagoSeptiembre: new FormControl(''),
     });
 
   constructor(public listadoFireServ : ListadofireService) { }
@@ -34,9 +33,9 @@ export class CrearComponent implements OnInit {
       pon: this.loginForm.value.pon,
       pagoMayo: "p",
       pagoJunio: "p",
-      pagoJulio: this.loginForm.value.pagoJulio,
-      pagoAgosto: this.loginForm.value.pagoAgosto,
-      pagoSeptiembre: "",
+      pagoJulio: "p",
+      pagoAgosto: "p",
+      pagoSeptiembre: this.loginForm.value.pagoSeptiembre,
       pagoOctubre: "",
       pagoNoviembre: "",
       pagoDiciembre: ""

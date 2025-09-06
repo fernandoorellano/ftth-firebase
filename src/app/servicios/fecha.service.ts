@@ -30,23 +30,23 @@
         let resultadoDiferencia = diaNumerico - this.fechaDiaActualNumerica;
         let resultadoMesDiferencia = this.fechaMesActualNumerica - mesNumerico;
 
-        if((diaNumerico == this.fechaDiaActualNumerica) && (datos[index].pagoSeptiembre != "P" || datos[index].pagoSeptiembre != "p") ){
-          let mensaje = datos[index].identificador+".-"+datos[index].descripcion+" - ("+this.fechaNueva[index]+").";
-          this.mensajePagoActual.push(mensaje);
-        }else
         if((resultadoDiferencia >= 1) && (resultadoDiferencia <= 2) && (datos[index].pagoSeptiembre != "P" || datos[index].pagoSeptiembre != "p") ){
           let mensaje = datos[index].identificador+".-"+datos[index].descripcion+" - ("+this.fechaNueva[index]+").";
           this.mensajePagoFuturo.push(mensaje);
         }else
         if((resultadoDiferencia < 0 &&  datos[index].pagoSeptiembre != "P" && datos[index].pagoSeptiembre != "p")){
-          let mensaje = datos[index].identificador+")."+datos[index].descripcion+" ---> ("+this.fechaNueva[index]+").";          
+          let mensaje = index+1+"-("+datos[index].identificador+")."+datos[index].descripcion+" ---> ("+this.fechaNueva[index]+").";          
           this.mensajePagoAnteriores.push(mensaje);
         }
         else
+        if((diaNumerico == this.fechaDiaActualNumerica) && (datos[index].pagoSeptiembre != "P" && datos[index].pagoSeptiembre != "p") ){
+          let mensaje = index+1+"-("+datos[index].identificador+").-"+datos[index].descripcion+" - ("+this.fechaNueva[index]+").";
+          this.mensajePagoActual.push(mensaje);
+        }else
         if((datos[index].pagoAgosto != "P" && datos[index].pagoAgosto != "p")){
-          let mensaje = datos[index].identificador+")."+datos[index].descripcion+" ---> ("+this.fechaNueva[index]+").";          
+          let mensaje = index+1+"-("+datos[index].identificador+")."+datos[index].descripcion+" ---> ("+this.fechaNueva[index]+").";          
           this.mensajePagoAnteriores.push(mensaje);
-        }  
+        }
       }
     }
 

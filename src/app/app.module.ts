@@ -11,25 +11,27 @@ import {HttpClientModule} from '@angular/common/http';
 
 
 import { ListadofirebaseComponent } from './componentes/listadofirebase/listadofirebase.component';
-import { ListadopagoComponent } from './componentes/listadopago/listadopago.component';
 import { NavbarComponent } from './componentes/navbar/navbar.component';
 import { CrearComponent } from './paginas/crear/crear.component';
 import { EdicionComponent } from './paginas/edicion/edicion.component';
 import { InicioComponent } from './paginas/inicio/inicio.component';
 import { ListadoComponent } from './paginas/listado/listado.component';
 import { ListadoFaltantesComponent } from './componentes/listado-faltantes/listado-faltantes.component';
+import { ListadoActualesComponent } from './componentes/listado-actuales/listado-actuales.component';
+import { ListadoFuturosComponent } from './componentes/listado-futuros/listado-futuros.component';
 
 @NgModule({
   declarations: [
       AppComponent,
     ListadofirebaseComponent,
-    ListadopagoComponent,
     NavbarComponent,
     CrearComponent,
     EdicionComponent,
     InicioComponent,
     ListadoComponent,
-    ListadoFaltantesComponent
+    ListadoFaltantesComponent,
+    ListadoActualesComponent,
+    ListadoFuturosComponent
   ],
   imports: [
     BrowserModule,

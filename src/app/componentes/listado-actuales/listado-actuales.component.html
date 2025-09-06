@@ -1,0 +1,10 @@
+<div class="contenedor" *ngIf="listadoServ.mensajePagoActual != ''">
+    <div class="row">
+        <p>Hoy <b>{{listadoServ.fecha | date: "dd-MM-yyyy"}}</b> le toca abonar a:</p>
+        <div class="col fechas">
+            <p *ngFor="let item of listadoServ.mensajePagoActual">
+                {{item}}
+            </p>
+        </div>
+    </div>
+</div>

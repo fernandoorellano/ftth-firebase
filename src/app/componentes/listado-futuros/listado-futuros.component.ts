@@ -2,13 +2,11 @@ import { Component, OnInit } from '@angular/core';
 import { FechaService } from 'src/app/servicios/fecha.service';
 
 @Component({
-  selector: 'app-listadopago',
-  templateUrl: './listadopago.component.html',
-  styleUrls: ['./listadopago.component.css']
+  selector: 'app-listado-futuros',
+  templateUrl: './listado-futuros.component.html',
+  styleUrls: ['./listado-futuros.component.css']
 })
-export class ListadopagoComponent implements OnInit {
-
-    fechaActual: any = new Date();
+export class ListadoFuturosComponent implements OnInit {
 
   constructor(public listadoServ: FechaService) { }
 

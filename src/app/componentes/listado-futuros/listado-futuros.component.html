@@ -1,0 +1,10 @@
+<div class="contenedor" *ngIf="listadoServ.mensajePagoFuturo != ''">
+    <div class="row">
+        <p>PAGOS FUTUROS ({{listadoServ.mensajePagoFuturo.length}}).</p>
+        <div class="col fechas">
+            <p *ngFor="let item of listadoServ.mensajePagoFuturo">
+                {{item}}
+            </p>
+        </div>
+    </div>
+</div>
