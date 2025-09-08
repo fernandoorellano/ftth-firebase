@@ -13,7 +13,7 @@ const routes: Routes = [
     {path: "listado", component: ListadoComponent},
     {path: "edicion", canActivate: [VerificarGuard], component: EdicionComponent},
     {path: "crear", component: CrearComponent},
-    {path: "login", component: LoginComponent}
+    {path: "login", component: LoginComponent},
 ];
 
 @NgModule({
