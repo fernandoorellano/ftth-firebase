@@ -1,0 +1,18 @@
+<div class="contenedor">   
+    <div class="row">
+        <div class="col">
+            <p>Ingreso al sistema</p>
+            <form [formGroup]="loginForm" (ngSubmit)="onLogin()">
+                <input class="form-control"
+                    placeholder="Ingrese usuario" 
+                    formControlName="usuario">
+                <input class="form-control"
+                    type="password"
+                    placeholder="Ingrese contraseña" 
+                    formControlName="contraseña">
+                <button type="submit">Iniciar sesion</button>
+            </form>
+            <span>{{mensajeLogin}}</span>
+        </div>
+    </div>
+</div>

@@ -1,17 +1,22 @@
 import { Injectable } from '@angular/core';
-import { ActivatedRouteSnapshot, CanActivate, RouterLink, RouterStateSnapshot, UrlTree } from '@angular/router';
+import { ActivatedRouteSnapshot, CanActivate, Router, RouterLink, RouterStateSnapshot, UrlTree } from '@angular/router';
 import { Observable } from 'rxjs';
+import { AuthService } from '../servicios/auth.service';
 
 @Injectable({
   providedIn: 'root'
 })
 export class VerificarGuard implements CanActivate {
-   constructor() {}
+   constructor(private authSrv: AuthService, private router: Router) {}
 
   canActivate(): Observable<boolean | UrlTree> | Promise<boolean | UrlTree> | boolean | UrlTree {
    
-   console.log("canactivate activado", RouterLink);
-   return true;
+    if(this.authSrv.login){
+      return true;
+    }
+    //redirigir
+    this.router.navigate(["login"]);
+    return false;
     
   } 
   

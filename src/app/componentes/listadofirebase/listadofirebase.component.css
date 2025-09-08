@@ -50,21 +50,21 @@ p{
     
     .col-1{
         width: 6vw;
-        font-size: var(--tx-sm);
+        font-size: var(--tx-m);
     }
 
     .col-2{
-        width: 17vw;
+        width: 21vw;
     }
     
     p{
         writing-mode: vertical-lr;
         display: flex;
         justify-content: center;
-        font-size: var(--tx-sm);
+        font-size: var(--tx-m);
     }
 
     span{
-        font-size: var(--tx-sm);
+        font-size: var(--tx-m);
     }
 }

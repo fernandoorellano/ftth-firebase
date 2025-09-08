@@ -1,7 +1,8 @@
 :root {
     --bg-color:rgb(222, 222, 222);
     --tx-sm: 11px;
-    --tx-bg: 14px;
+    --tx-m: 13px;
+    --tx-bg: 16px;
 }
 
 body{

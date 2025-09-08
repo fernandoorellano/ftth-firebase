@@ -24,6 +24,12 @@
     }
 
     a{
-        font-size: 12px;
+        font-size: var(--tx-m);
+    }
+
+    .btnLog span{
+        border: 1px solid var(--bg-color);
+        width: 100px;
+        font-size: var(--tx-m);
     }
 }

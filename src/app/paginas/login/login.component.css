@@ -35,6 +35,10 @@ button{
     font-size: var(--tx-m);
 }
 
+span{
+    font-size: var(--tx-sm);
+}
+
 @media (min-width: 280px) and (max-width: 600px) {
     .row{
         width: 77vw;

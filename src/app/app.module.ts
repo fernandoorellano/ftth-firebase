@@ -19,6 +19,7 @@ import { ListadoComponent } from './paginas/listado/listado.component';
 import { ListadoFaltantesComponent } from './componentes/listado-faltantes/listado-faltantes.component';
 import { ListadoActualesComponent } from './componentes/listado-actuales/listado-actuales.component';
 import { ListadoFuturosComponent } from './componentes/listado-futuros/listado-futuros.component';
+import { LoginComponent } from './paginas/login/login.component';
 
 @NgModule({
   declarations: [
@@ -31,7 +32,8 @@ import { ListadoFuturosComponent } from './componentes/listado-futuros/listado-f
     ListadoComponent,
     ListadoFaltantesComponent,
     ListadoActualesComponent,
-    ListadoFuturosComponent
+    ListadoFuturosComponent,
+    LoginComponent
   ],
   imports: [
     BrowserModule,
