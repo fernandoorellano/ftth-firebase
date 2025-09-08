@@ -8,5 +8,9 @@ export const environment = {
     messagingSenderId: "260102642918",
     appId: "1:260102642918:web:afd31cfdce214088b02f27"
   },
+  auth :{
+    usuario: "admin",
+    contraseña: "admin7"
+  }
   
 };
