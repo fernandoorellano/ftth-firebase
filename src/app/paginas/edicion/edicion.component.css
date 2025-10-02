@@ -1,0 +1,87 @@
+.container{
+    height: 50vh;
+    overflow: auto;
+}
+
+.contenedor{
+    display: flex;
+    justify-content: center;
+    align-items:center;
+}
+
+.row{
+    display: flex;
+    justify-content: center;
+}
+
+.col{
+    display: flex;
+    border: 1px solid rgb(162, 162, 162);
+    justify-content: center;
+    padding: 0;
+}
+
+.col-1{
+    width: 5vw;
+}
+
+.col-2{
+    width: 9vw;
+}
+
+.col-3{
+    width: 14vw;
+}
+
+input{
+    border: none;
+    width: 100%;
+    text-align: center;
+}
+
+p{
+    margin: 0;
+    padding: 0;
+}
+
+.pagoStyle{
+    background-color: rgb(222, 222, 222);
+}
+
+@media (min-width: 200px) and (max-width: 1000px){
+    b{
+        padding: 3px;
+    }
+    
+    .col-1{
+        width: 6vw;
+        font-size: var(--tx-m);
+    }
+
+    .col-2{
+        width: 16vw;
+    }
+
+    .col-3{
+        width: 22vw;
+    }
+
+    input{
+        font-size: var(--tx-m);
+    }
+    
+    p{
+        writing-mode: vertical-lr;
+        display: flex;
+        justify-content: center;
+        font-size: var(--tx-m);
+    }
+
+    button{
+        font-size: var(--tx-m);
+        width: 20px;
+        height: 90%;
+        display: flex;
+        justify-content: center;
+    }
+}
