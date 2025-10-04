@@ -26,13 +26,10 @@ export class LoginComponent implements OnInit {
     let contraseña = this.loginForm.controls['contraseña'].value;
 
     if(usuario == this.authServ.usuario && contraseña == this.authServ.contraseña){
-      console.log(usuario, contraseña);
       this.authServ.login = true;
       this.router.navigate(["inicio"]);
     }else{
       this.mensajeLogin = "Usuario/contraseña incorrecto."
     }
-    
   }
-
 }
