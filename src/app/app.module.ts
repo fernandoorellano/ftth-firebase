@@ -20,6 +20,7 @@ import { ListadoFaltantesComponent } from './componentes/listado-faltantes/lista
 import { ListadoActualesComponent } from './componentes/listado-actuales/listado-actuales.component';
 import { ListadoFuturosComponent } from './componentes/listado-futuros/listado-futuros.component';
 import { LoginComponent } from './paginas/login/login.component';
+import { ControlpagoComponent } from './paginas/controlpago/controlpago.component';
 
 @NgModule({
   declarations: [
@@ -33,7 +34,8 @@ import { LoginComponent } from './paginas/login/login.component';
     ListadoFaltantesComponent,
     ListadoActualesComponent,
     ListadoFuturosComponent,
-    LoginComponent
+    LoginComponent,
+    ControlpagoComponent
   ],
   imports: [
     BrowserModule,

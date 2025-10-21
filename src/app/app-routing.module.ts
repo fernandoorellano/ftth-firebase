@@ -6,6 +6,7 @@ import { InicioComponent } from './paginas/inicio/inicio.component';
 import { ListadoComponent } from './paginas/listado/listado.component';
 import { VerificarGuard } from './guard/verificar.guard';
 import { LoginComponent } from './paginas/login/login.component';
+import { ControlpagoComponent } from './paginas/controlpago/controlpago.component';
 
 const routes: Routes = [
     {path: "",  redirectTo: "inicio", pathMatch: "full"},
@@ -14,6 +15,7 @@ const routes: Routes = [
     {path: "edicion", canActivate: [VerificarGuard], component: EdicionComponent},
     {path: "crear", component: CrearComponent},
     {path: "login", component: LoginComponent},
+    {path: "controlpagos", component: ControlpagoComponent}
 ];
 
 @NgModule({
