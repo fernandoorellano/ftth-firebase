@@ -15,7 +15,16 @@
 
     fechaNueva: any = [];
 
-    constructor() { }
+    mostrarDato = false;
+
+    constructor() {}
+
+    actualizarPago(pago:string, item: any){
+      let mes : any = new Date();
+      let mesEsp = mes.toLocaleString('es-ES', { month: 'long' }).toUpperCase().slice(0, 1) + mes.toLocaleString('es-ES', { month: 'long' }).slice(1);
+
+      console.log(pago, mesEsp, item)
+    }
 
     calculoDiaRestante(datos: any){
       this.reiniciarCalculoDias()
@@ -76,6 +85,7 @@
           this.mensajePagoAnteriores.push(mensaje);
         }
       }
+      this.mostrarDato = true;
     }
 
     reiniciarCalculoDias(){
@@ -84,8 +94,5 @@
       this.mensajePagoAnteriores = [];
     }
 
-    cambiarMesActual(){
-      let mes : any = new Date();
-      console.log(mes.toLocaleString('es-ES', { month: 'long' }).toUpperCase().slice(0, 1) + mes.toLocaleString('es-ES', { month: 'long' }).slice(1));
-    }
+    
   }

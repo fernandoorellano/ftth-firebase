@@ -13,9 +13,9 @@ const routes: Routes = [
     {path: "inicio", component: InicioComponent},
     {path: "listado", component: ListadoComponent},
     {path: "edicion", canActivate: [VerificarGuard], component: EdicionComponent},
-    {path: "crear", component: CrearComponent},
+    {path: "crear", canActivate: [VerificarGuard], component: CrearComponent},
     {path: "login", component: LoginComponent},
-    {path: "controlpagos", component: ControlpagoComponent}
+    {path: "controlpagos", canActivate: [VerificarGuard], component: ControlpagoComponent}
 ];
 
 @NgModule({

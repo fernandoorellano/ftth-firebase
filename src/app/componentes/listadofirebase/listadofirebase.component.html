@@ -1,77 +1,85 @@
-<div class="container">
+<div class="container" *ngIf="!fechaServ.mostrarDato; else mostrarDatos">
     <div class="contenedor">
-        <div class="row">
-            <div class="col col-1">
-                <p>&nbsp;</p>
-            </div>
-            <div class="col col-1">
-                <p><b>ID</b></p>
-            </div>
-            <div class="col col-2">
-                <p><b>Desc.</b></p>
-            </div>
-            <div class="col col-2">
-                <p><b>Fecha</b></p>
-            </div>
-            <div class="col col-1">
-                <p><b>PON</b></p>
-            </div>
-            <div class="col col-1">
-                <p><b>Jul.</b></p>
-            </div>
-            <div class="col col-1">
-                <p><b>Agost.</b></p>
-            </div>
-            <div class="col col-1">
-                <p><b>Sept.</b></p>
-            </div>
-            <div class="col col-1">
-                <p><b>Oct.</b></p>
-            </div>
-            <div class="col col-1">
-                <p><b>Nov.</b></p>
-            </div>
-            <div class="col col-1">
-                <p><b>Dic.</b></p>
-            </div>
-        </div>
-    </div>
-
-    <div class="contenedor" *ngFor="let item of listadoFireServ.abonado, index as index">
-        <div class="row">
-            <div class="col col-1">
-                <span><b>{{index+1}}</b></span>
-            </div>
-            <div class="col col-1">
-                <span>{{item.identificador}}</span>
-            </div>
-            <div class="col col-2">
-                <span>{{item.descripcion}}</span>
-            </div>
-            <div class="col col-2">
-                <span>{{fechaServ.fechaNueva[index]}}</span>
-            </div>
-            <div class="col col-1">
-                <span>{{item.pon}}</span>
-            </div>
-            <div class="col col-1">
-                <span>{{item.pagoJulio}}</span>
-            </div>
-            <div class="col col-1">
-                <span>{{item.pagoAgosto}}</span>
-            </div>
-            <div class="col col-1">
-                <span [ngClass]="'pagoStyle'">{{item.pagoSeptiembre}}</span>
-            </div>
-            <div class="col col-1">
-                <span>{{item.pagoOctubre}}</span>
-            </div>
-            <div class="col col-1">
-                <span [ngClass]="'pagoStyle'">{{item.pagoNoviembre}}</span>
-            </div>
-            <div class="col col-1">
-                <span>{{item.pagoDiciembre}}</span>
-            </div>
-        </div>
+        <span>Cargando Datos ...</span>
     </div>
 </div>
+
+<ng-template #mostrarDatos>
+    <div class="container">
+        <div class="contenedor">
+            <div class="row">
+                <div class="col col-1">
+                    <p>&nbsp;</p>
+                </div>
+                <div class="col col-1">
+                    <p><b>ID</b></p>
+                </div>
+                <div class="col col-2">
+                    <p><b>Desc.</b></p>
+                </div>
+                <div class="col col-2">
+                    <p><b>Fecha</b></p>
+                </div>
+                <div class="col col-1">
+                    <p><b>PON</b></p>
+                </div>
+                <div class="col col-1">
+                    <p><b>Jul.</b></p>
+                </div>
+                <div class="col col-1">
+                    <p><b>Agost.</b></p>
+                </div>
+                <div class="col col-1">
+                    <p><b>Sept.</b></p>
+                </div>
+                <div class="col col-1">
+                    <p><b>Oct.</b></p>
+                </div>
+                <div class="col col-1">
+                    <p><b>Nov.</b></p>
+                </div>
+                <div class="col col-1">
+                    <p><b>Dic.</b></p>
+                </div>
+            </div>
+        </div>
+
+        <div class="contenedor" *ngFor="let item of listadoFireServ.abonado, index as index">
+            <div class="row">
+                <div class="col col-1">
+                    <span><b>{{index+1}}</b></span>
+                </div>
+                <div class="col col-1">
+                    <span>{{item.identificador}}</span>
+                </div>
+                <div class="col col-2">
+                    <span>{{item.descripcion}}</span>
+                </div>
+                <div class="col col-2">
+                    <span>{{fechaServ.fechaNueva[index]}}</span>
+                </div>
+                <div class="col col-1">
+                    <span>{{item.pon}}</span>
+                </div>
+                <div class="col col-1">
+                    <span>{{item.pagoJulio}}</span>
+                </div>
+                <div class="col col-1">
+                    <span>{{item.pagoAgosto}}</span>
+                </div>
+                <div class="col col-1">
+                    <span [ngClass]="'pagoStyle'">{{item.pagoSeptiembre}}</span>
+                </div>
+                <div class="col col-1">
+                    <span>{{item.pagoOctubre}}</span>
+                </div>
+                <div class="col col-1">
+                    <span [ngClass]="'pagoStyle'">{{item.pagoNoviembre}}</span>
+                </div>
+                <div class="col col-1">
+                    <span>{{item.pagoDiciembre}}</span>
+                </div>
+            </div>
+        </div>
+    </div>
+</ng-template>

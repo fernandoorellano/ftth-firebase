@@ -26,10 +26,4 @@ export class FirebaseService {
     return this.afs.doc('/abonados/'+abonado.id).update(abonado);
   }
 
-  updateStuden(abonado: Abonado){
-    this.eliminarDatos(abonado);
-    this.actualizarDatos(abonado);
-  }
-
-
 }

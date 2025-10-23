@@ -1,1 +1,85 @@
-<p>controlpago works!</p>
+<app-listado-faltantes></app-listado-faltantes>
+<app-listado-actuales></app-listado-actuales>
+<div class="container" *ngIf="!fechaServ.mostrarDato; else mostrarDatos">
+    <div class="contenedor">
+        <span>Cargando Datos ...</span>
+    </div>
+</div>
+
+<ng-template #mostrarDatos>
+    <div class="container">
+        <div class="contenedor">
+            <div class="row">
+                <div class="col col-2">
+                    <p>&nbsp;</p>
+                </div>
+                <div class="col col-2">
+                    <p><b>ID</b></p>
+                </div>
+                <div class="col col-4">
+                    <p><b>Desc.</b></p>
+                </div>
+                <div class="col col-3">
+                    <p><b>Fecha</b></p>
+                </div>
+                <div class="col col-1">
+                    <p><b>PON</b></p>
+                </div>
+                <div class="col col-1">
+                    <p><b>Oct.</b></p>
+                </div>
+                <div class="col col-1">
+                    <p><b>Nov.</b></p>
+                </div>
+                <div class="col col-1">
+                    <p><b>Dic.</b></p>
+                </div>
+                <div class="col col-1">
+                    <p>&nbsp;</p>
+                </div>
+                <div class="col col-1">
+                    <p>&nbsp;</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="contenedor" *ngFor="let item of listadoFireServ.abonado, index as index">
+            <div class="row">
+                <div class="col col-2">
+                    <span><b>{{index+1}}</b></span>
+                </div>
+                <div class="col col-2">
+                    <span>{{item.identificador}}</span>
+                </div>
+                <div class="col col-4">
+                    <span>{{item.descripcion}}</span>
+                </div>
+                <div class="col col-3">
+                    <span>{{fechaServ.fechaNueva[index]}}</span>
+                </div>
+                <div class="col col-1">
+                    <span>{{item.pon}}</span>
+                </div>
+                <div class="col col-1">
+                    <span>{{item.pagoOctubre}}</span>
+                </div>
+                <div class="col col-1">
+                    <span [ngClass]="'pagoStyle'">{{item.pagoNoviembre}}</span>
+                </div>
+                <div class="col col-1">
+                    <span>{{item.pagoDiciembre}}</span>
+                </div>
+                <div class="col col-1">
+                    <button (click)="listadoFireServ.actualizarPago('P', item)" class="success">
+                    P
+                    </button>
+                </div>
+                <div class="col col-1">
+                    <button (click)="listadoFireServ.actualizarPago('', item)" class="danger">
+                    X
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+</ng-template>
