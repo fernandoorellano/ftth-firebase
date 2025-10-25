@@ -17,7 +17,7 @@ export class ControlpagoComponent implements OnInit {
   }
 
   enviarMensaje(cel: string){
-    let url = "https://wa.me/+549"+cel+"?text=Hola!%20%F0%9F%91%8B%20%20Hoy%20tenes%20que%20abonar%20";
+    let url = "https://wa.me/+549"+cel+"?text=Hola%20Cómo%20estás?%20Esperamos%20que%20bien%20%F0%9F%98%8A%20%0AHoy%20sería%20la%20fecha%20de%20cobro.%20Abonarías%20en%20efectivo%20o%20transferencia?";
     window.open(url, "_blank");
   }
 
