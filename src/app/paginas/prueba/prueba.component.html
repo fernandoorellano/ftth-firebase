@@ -1,0 +1,14 @@
+<div class="contenedor">
+    <div class="row">
+        <p>Sept.</p>
+        <div *ngFor="let item of fechaServ.nombreMesAnterior, index as index">
+            {{index+1}}-{{item}}
+        </div>
+    </div>
+    <div class="row">
+        <p>Oct.</p>
+        <div *ngFor="let item of fechaServ.nombreMesActual, index as index">
+            {{index+1}}-{{item}}
+        </div>
+    </div>
+</div>

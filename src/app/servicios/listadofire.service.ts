@@ -12,9 +12,7 @@ export class ListadofireService {
   
     constructor( private data: FirebaseService, public fechaSer: FechaService) {}
     
-    ngOnInit(): void {
-      this.obtenerDatosAbonado();
-    }
+    ngOnInit(): void {}
   
     obtenerDatosAbonado(){
       this.data.obtenerDatos().subscribe(res=>{
@@ -35,9 +33,9 @@ export class ListadofireService {
       this.data.crearDatos(nuevoAbonado);
     }
   
-    actualizarAbonado(item: any){
+    actualizarAbonado(item: any, fecha: any){
+      // item.fecha = fecha;
       this.data.actualizarDatos(item);
-      this.obtenerDatosAbonado();
     }
   
   
@@ -72,7 +70,7 @@ export class ListadofireService {
             abonado.pagoDiciembre = pago;
           break;
       }
-      this.actualizarAbonado(abonado);
+      this.actualizarAbonado(abonado, abonado.fecha);
     }
   
 }

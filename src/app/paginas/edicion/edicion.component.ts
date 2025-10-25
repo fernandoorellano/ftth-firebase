@@ -9,8 +9,9 @@ import { ListadofireService } from 'src/app/servicios/listadofire.service';
 })
 export class EdicionComponent implements OnInit {
 
+  fecha: any;
+
    constructor(public listadoFireServ : ListadofireService, public fechaServ: FechaService) { }
-      
     
       ngOnInit(): void {
         this.listadoFireServ.obtenerDatosAbonado()

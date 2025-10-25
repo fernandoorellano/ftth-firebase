@@ -19,6 +19,12 @@
                 <div class="col col-3">
                     <p><b>Desc.</b></p>
                 </div>
+                <div class="col col-1">
+                    <p><b>IDD</b></p>
+                </div>
+                <div class="col col-2">
+                    <p><b>Celular</b></p>
+                </div>
                 <div class="col col-2">
                     <p><b>Fecha</b></p>
                 </div>
@@ -60,6 +66,12 @@
                 <div class="col col-3">
                     <input [(ngModel)]="item.descripcion" placeholder="Ingrese descripcion">
                 </div>
+                <div class="col col-1">
+                    <input [(ngModel)]="item.id" placeholder="ID">
+                </div>
+                <div class="col col-2">
+                    <input [(ngModel)]="item.cel" placeholder="Ingrese celular">
+                </div>
                 <div class="col col-2">
                     <input [(ngModel)]="fechaServ.fechaNueva[index]" placeholder="Ingrese fecha">
                 </div>
@@ -85,7 +97,7 @@
                     <input [(ngModel)]="item.pagoDiciembre">
                 </div>
                 <div class="col col-1">
-                    <button (click)="listadoFireServ.actualizarAbonado(item)">
+                    <button (click)="listadoFireServ.actualizarAbonado(item, fechaServ.fechaNueva[index])">
                     ok
                     </button>
                 </div>

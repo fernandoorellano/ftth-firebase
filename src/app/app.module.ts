@@ -21,6 +21,7 @@ import { ListadoActualesComponent } from './componentes/listado-actuales/listado
 import { ListadoFuturosComponent } from './componentes/listado-futuros/listado-futuros.component';
 import { LoginComponent } from './paginas/login/login.component';
 import { ControlpagoComponent } from './paginas/controlpago/controlpago.component';
+import { PruebaComponent } from './paginas/prueba/prueba.component';
 
 @NgModule({
   declarations: [
@@ -35,7 +36,8 @@ import { ControlpagoComponent } from './paginas/controlpago/controlpago.componen
     ListadoActualesComponent,
     ListadoFuturosComponent,
     LoginComponent,
-    ControlpagoComponent
+    ControlpagoComponent,
+    PruebaComponent
   ],
   imports: [
     BrowserModule,

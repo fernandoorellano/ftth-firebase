@@ -16,4 +16,9 @@ export class ControlpagoComponent implements OnInit {
     this.listadoFireServ.obtenerDatosAbonado()
   }
 
+  enviarMensaje(cel: string){
+    let url = "https://wa.me/+549"+cel+"?text=Hola!%20%F0%9F%91%8B%20%20Hoy%20tenes%20que%20abonar%20";
+    window.open(url, "_blank");
+  }
+
 }

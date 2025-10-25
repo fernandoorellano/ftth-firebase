@@ -1,0 +1,11 @@
+.contenedor{
+    display: flex;
+    align-items: center;
+    align-content: center;
+}
+
+.row{
+    width: 20vw;
+    height: 40vh;
+    overflow: auto;
+}

@@ -2,6 +2,7 @@ export interface Abonado {
     id?: string,
     identificador?: number,
     descripcion?: string,
+    cel?: string,
     fecha?: string,
     pon?: string,
     pagoMayo?: string,
