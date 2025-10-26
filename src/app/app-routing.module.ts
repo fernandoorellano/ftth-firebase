@@ -10,13 +10,13 @@ import { ControlpagoComponent } from './paginas/controlpago/controlpago.componen
 import { PruebaComponent } from './paginas/prueba/prueba.component';
 
 const routes: Routes = [
-    {path: "",  redirectTo: "inicio", pathMatch: "full"},
-    {path: "inicio", component: InicioComponent},
+    {path: "",  redirectTo: "controlpagos", pathMatch: "full"},
+    // {path: "inicio", component: InicioComponent},
     {path: "listado", component: ListadoComponent},
-    {path: "edicion", component: EdicionComponent},
-    {path: "crear", component: CrearComponent},
+    {path: "edicion", canActivate: [VerificarGuard], component: EdicionComponent},
+    {path: "crear", canActivate: [VerificarGuard], component: CrearComponent},
     {path: "login", component: LoginComponent},
-    {path: "controlpagos",  component: ControlpagoComponent},
+    {path: "controlpagos", canActivate: [VerificarGuard],component: ControlpagoComponent},
     {path: "prueba", component: PruebaComponent}
   ];
 

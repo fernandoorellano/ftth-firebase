@@ -11,6 +11,8 @@ export const environment = {
   auth :{
     usuario: "admin",
     contraseña: "admin7"
-  }
+  },
+  inicioTextoUrl: "https://wa.me/+549",
+  cuerpoTextoUrl: "?text=Hola%20Cómo%20estás?%20Esperamos%20que%20bien%20%F0%9F%98%8A%20%0AHoy%20sería%20la%20fecha%20de%20cobro.%20Abonarías%20en%20efectivo%20o%20transferencia?"
   
 };

@@ -27,7 +27,7 @@ export class LoginComponent implements OnInit {
 
     if(usuario == this.authServ.usuario && contraseña == this.authServ.contraseña){
       this.authServ.login = true;
-      this.router.navigate(["inicio"]);
+      this.router.navigate(["controlpagos"]);
     }else{
       this.mensajeLogin = "Usuario/contraseña incorrecto."
     }

@@ -20,12 +20,15 @@
     nombreMesActual : any = [];
     nombreMesAnterior : any = [];
 
+    celularPagoActual: any = [];
+    celularPagoAnterior: any = [];
+
     constructor() {}
 
     calculoDiaRestante(datos: any){
       this.reiniciarCalculoDias()
       for (let index = 0; index < datos.length; index++) {
-        
+      
         let diaNumerico = datos[index].fecha.slice(0, 2);
 
         switch(this.fechaMesActualNumerica){
@@ -65,28 +68,34 @@
         this.fechaNueva[index] = datos[index].fecha.slice(0, 2)+'-'+datos[index].fecha.slice(2, 4)+"-"+datos[index].fecha.slice(4, 6)
         let resultadoDiferencia = diaNumerico - this.fechaDiaActualNumerica;
 
-        if((resultadoDiferencia < 0 &&  this.nombreMesActual[0] != "P" && (this.nombreMesActual[0] != "P" || this.nombreMesActual[0] != "p") )){
-          let mensaje = index+1+"_("+datos[index].identificador+"). "+datos[index].descripcion+" --> "+this.fechaNueva[index];          
+        if(resultadoDiferencia < 0  && this.nombreMesActual[index] != "P" && this.nombreMesActual[index] != "p") {
+          let mensaje = index+1+"_("+datos[index].identificador+"). "+datos[index].descripcion+" --> "+this.fechaNueva[index];
+          this.celularPagoAnterior.push(datos[index].cel);
           this.mensajePagoAnteriores.push(mensaje);
         }
         else
-        if((diaNumerico == this.fechaDiaActualNumerica) && (this.nombreMesActual[0] != "P" && this.nombreMesActual[0] != "p") ){
+        if(resultadoDiferencia == 0 && this.nombreMesActual[index] != "P" && this.nombreMesActual[index] != "p") {
           let mensaje = index+1+"_("+datos[index].identificador+"). "+datos[index].descripcion+" --> "+this.fechaNueva[index];
+          this.celularPagoActual.push(datos[index].cel);
           this.mensajePagoActual.push(mensaje);
         }else
-        if((this.nombreMesAnterior[0] != "P" && this.nombreMesAnterior[0] != "p")){
+        if((this.nombreMesAnterior[index] != "P" && this.nombreMesAnterior[index] != "p")){
           let mensaje = index+1+"_("+datos[index].identificador+"). "+datos[index].descripcion+" --> "+this.fechaNueva[index];          
+          this.celularPagoAnterior.push(datos[index].cel);
           this.mensajePagoAnteriores.push(mensaje);
         }
       }
       this.mostrarDato = true;
+      
     }
 
     reiniciarCalculoDias(){
       this.mensajePagoActual = [];
       this.mensajePagoFuturo = [];
       this.mensajePagoAnteriores = [];
+
+      this.nombreMesActual = [];
+      this.nombreMesAnterior = [];
     }
 
-    
   }
