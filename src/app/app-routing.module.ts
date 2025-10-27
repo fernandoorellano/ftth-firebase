@@ -10,8 +10,8 @@ import { ControlpagoComponent } from './paginas/controlpago/controlpago.componen
 import { PruebaComponent } from './paginas/prueba/prueba.component';
 
 const routes: Routes = [
-    {path: "",  redirectTo: "controlpagos", pathMatch: "full"},
-    // {path: "inicio", component: InicioComponent},
+    {path: "",  redirectTo: "inicio", pathMatch: "full"},
+    {path: "inicio", component: InicioComponent},
     {path: "listado", component: ListadoComponent},
     {path: "edicion", canActivate: [VerificarGuard], component: EdicionComponent},
     {path: "crear", canActivate: [VerificarGuard], component: CrearComponent},

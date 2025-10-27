@@ -23,6 +23,8 @@
     celularPagoActual: any = [];
     celularPagoAnterior: any = [];
 
+    btnWhatsapp: any = [];
+
     constructor() {}
 
     calculoDiaRestante(datos: any){
@@ -70,19 +72,24 @@
 
         if(resultadoDiferencia < 0  && this.nombreMesActual[index] != "P" && this.nombreMesActual[index] != "p") {
           let mensaje = index+1+"_("+datos[index].identificador+"). "+datos[index].descripcion+" --> "+this.fechaNueva[index];
+          this.btnWhatsapp.push(true);
           this.celularPagoAnterior.push(datos[index].cel);
           this.mensajePagoAnteriores.push(mensaje);
         }
         else
         if(resultadoDiferencia == 0 && this.nombreMesActual[index] != "P" && this.nombreMesActual[index] != "p") {
           let mensaje = index+1+"_("+datos[index].identificador+"). "+datos[index].descripcion+" --> "+this.fechaNueva[index];
+          this.btnWhatsapp.push(true);
           this.celularPagoActual.push(datos[index].cel);
           this.mensajePagoActual.push(mensaje);
         }else
         if((this.nombreMesAnterior[index] != "P" && this.nombreMesAnterior[index] != "p")){
           let mensaje = index+1+"_("+datos[index].identificador+"). "+datos[index].descripcion+" --> "+this.fechaNueva[index];          
+          this.btnWhatsapp.push(true);
           this.celularPagoAnterior.push(datos[index].cel);
           this.mensajePagoAnteriores.push(mensaje);
+        }else{
+          this.btnWhatsapp.push(false);
         }
       }
       this.mostrarDato = true;
