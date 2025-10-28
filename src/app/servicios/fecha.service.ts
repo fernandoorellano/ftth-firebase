@@ -93,16 +93,15 @@
         }
       }
       this.mostrarDato = true;
-      
     }
 
     reiniciarCalculoDias(){
       this.mensajePagoActual = [];
       this.mensajePagoFuturo = [];
       this.mensajePagoAnteriores = [];
-
       this.nombreMesActual = [];
       this.nombreMesAnterior = [];
+      this.btnWhatsapp = [];
     }
 
   }

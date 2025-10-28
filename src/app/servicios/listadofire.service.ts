@@ -25,7 +25,6 @@ export class ListadofireService {
       },err =>{
         alert("ERROR")
       });
-       
       this.fechaSer.reiniciarCalculoDias();
     }
   
@@ -36,7 +35,6 @@ export class ListadofireService {
     actualizarAbonado(item: any, fecha: any){
       // item.fecha = fecha;
       this.data.actualizarDatos(item);
-    
     }
   
   
@@ -72,7 +70,6 @@ export class ListadofireService {
           break;
       }
       this.actualizarAbonado(abonado, abonado.fecha);
-      this.obtenerDatosAbonado()
     }
   
 }

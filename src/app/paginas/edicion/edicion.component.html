@@ -19,7 +19,7 @@
                 <div class="col col-3">
                     <p><b>Desc.</b></p>
                 </div>
-                <div class="col col-2">
+                <div class="col col-3">
                     <p><b>Celular</b></p>
                 </div>
                 <div class="col col-2">
@@ -29,22 +29,13 @@
                     <p><b>PON</b></p>
                 </div>
                 <div class="col col-1">
-                    <p><b>Jul.</b></p>
-                </div>
-                <div class="col col-1">
-                    <p><b>Agost.</b></p>
-                </div>
-                <div class="col col-1">
-                    <p><b>Sept.</b></p>
-                </div>
-                <div class="col col-1">
                     <p><b>Oct.</b></p>
                 </div>
                 <div class="col col-1">
                     <p><b>Nov.</b></p>
                 </div>
                 <div class="col col-1">
-                    <p><b>Dic.</b></p>
+                    <p>&nbsp;</p>
                 </div>
                 <div class="col col-1">
                     <p>&nbsp;</p>
@@ -63,7 +54,7 @@
                 <div class="col col-3">
                     <input [(ngModel)]="item.descripcion" placeholder="Ingrese descripcion">
                 </div>
-                <div class="col col-2">
+                <div class="col col-3">
                     <input [(ngModel)]="item.cel" placeholder="Ingrese celular">
                 </div>
                 <div class="col col-2">
@@ -73,25 +64,18 @@
                     <input [(ngModel)]="item.pon">
                 </div>
                 <div class="col col-1">
-                    <input [(ngModel)]="item.pagoJulio">
-                </div>
-                <div class="col col-1">
-                    <input [(ngModel)]="item.pagoAgosto">
-                </div>
-                <div class="col col-1">
-                    <input [ngClass]="'pagoStyle'" [(ngModel)]="item.pagoSeptiembre">
-                </div>
-                <div class="col col-1">
                     <input [(ngModel)]="item.pagoOctubre">
                 </div>
                 <div class="col col-1">
                     <input [ngClass]="'pagoStyle'" [(ngModel)]="item.pagoNoviembre">
                 </div>
                 <div class="col col-1">
-                    <input [(ngModel)]="item.pagoDiciembre">
+                    <button class="btnMas">
+                    +
+                    </button>
                 </div>
                 <div class="col col-1">
-                    <button (click)="listadoFireServ.actualizarAbonado(item, fechaServ.fechaNueva[index])">
+                    <button class="btnSucces" (click)="listadoFireServ.actualizarAbonado(item, fechaServ.fechaNueva[index])">
                     ok
                     </button>
                 </div>

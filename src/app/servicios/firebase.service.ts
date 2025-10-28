@@ -18,6 +18,11 @@ export class FirebaseService {
     return this.afs.collection('/abonados', ref => ref.orderBy('fecha', 'asc')).snapshotChanges();
   }
 
+  obtenerDato(){
+   return this.afs.collection('/abonados', ref => ref.where('id', '==', "07kTkCMFDU0I1ST0HdYA"))
+      .valueChanges() 
+  }
+
   eliminarDatos(abonado: Abonado){
     return this.afs.doc('/abonados/'+abonado.id).delete();
   }

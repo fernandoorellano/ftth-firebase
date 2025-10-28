@@ -59,11 +59,13 @@ p{
     }
 
     .col-2{
+        padding: 0;
         width: 16vw;
     }
 
     .col-3{
-        width: 22vw;
+        padding: 0;
+        width: 20vw;
     }
 
     input{
@@ -74,7 +76,7 @@ p{
         writing-mode: vertical-lr;
         display: flex;
         justify-content: center;
-        font-size: var(--tx-m);
+        font-size: var(--tx-smm);
     }
 
     button{
@@ -83,9 +85,16 @@ p{
         height: 90%;
         display: flex;
         justify-content: center;
-        background-color: rgb(52, 207, 88);
         color: aliceblue;
         border: none;
         font-weight: 500;
+    }
+
+    .btnSucces{
+        background-color: rgb(52, 207, 88);
+    }
+
+    .btnMas{
+        color: black;
     }
 }

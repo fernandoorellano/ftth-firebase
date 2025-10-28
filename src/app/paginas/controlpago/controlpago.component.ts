@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { FechaService } from 'src/app/servicios/fecha.service';
+import { FirebaseService } from 'src/app/servicios/firebase.service';
 import { ListadofireService } from 'src/app/servicios/listadofire.service';
 import { environment } from 'src/environments/environment.prod';
 
@@ -10,10 +11,12 @@ import { environment } from 'src/environments/environment.prod';
 })
 export class ControlpagoComponent implements OnInit {
 
- constructor(public listadoFireServ : ListadofireService, public fechaServ: FechaService) {}
+ constructor(public listadoFireServ : ListadofireService, 
+  public fechaServ: FechaService) {}
     
   ngOnInit(): void {
-    this.listadoFireServ.obtenerDatosAbonado()
+    this.listadoFireServ.obtenerDatosAbonado();
+    // this.listadoFireServ.obtenerAbonado()
   }
 
   enviarMensaje(cel: string){
