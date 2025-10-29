@@ -70,7 +70,7 @@
                     <input [ngClass]="'pagoStyle'" [(ngModel)]="item.pagoNoviembre">
                 </div>
                 <div class="col col-1">
-                    <button class="btnMas">
+                    <button (click)="guardarDatos(item)" class="btnMas" data-bs-toggle="modal" data-bs-target="#datosModal">
                     +
                     </button>
                 </div>
@@ -83,3 +83,7 @@
         </div>
     </div>
 </ng-template>
+
+<!-- Modal -->
+
+  <app-modal></app-modal>

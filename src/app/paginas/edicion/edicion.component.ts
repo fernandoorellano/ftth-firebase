@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Abonado } from 'src/app/interfaces/abonado';
 import { FechaService } from 'src/app/servicios/fecha.service';
 import { ListadofireService } from 'src/app/servicios/listadofire.service';
 
@@ -15,6 +16,15 @@ export class EdicionComponent implements OnInit {
     
       ngOnInit(): void {
         this.listadoFireServ.obtenerDatosAbonado()
+      }
+
+      guardarDatos(datos: any){
+        this.reiniciarDatos();
+        this.listadoFireServ.datosAbonado.push(datos);
+      }
+
+      reiniciarDatos(){
+        this.listadoFireServ.datosAbonado = [];
       }
 
 }

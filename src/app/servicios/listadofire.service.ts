@@ -9,6 +9,7 @@ import { FechaService } from './fecha.service';
 export class ListadofireService {
 
     abonado: Abonado[] = [];
+    datosAbonado: any;
   
     constructor( private data: FirebaseService, public fechaSer: FechaService) {}
     

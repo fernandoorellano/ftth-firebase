@@ -13,7 +13,7 @@ const routes: Routes = [
     {path: "",  redirectTo: "inicio", pathMatch: "full"},
     {path: "inicio", component: InicioComponent},
     {path: "listado", component: ListadoComponent},
-    {path: "edicion",  component: EdicionComponent},
+    {path: "edicion", component: EdicionComponent},
     {path: "crear", canActivate: [VerificarGuard], component: CrearComponent},
     {path: "login", component: LoginComponent},
     {path: "controlpagos", canActivate: [VerificarGuard],component: ControlpagoComponent},

@@ -22,6 +22,7 @@ import { ListadoFuturosComponent } from './componentes/listado-futuros/listado-f
 import { LoginComponent } from './paginas/login/login.component';
 import { ControlpagoComponent } from './paginas/controlpago/controlpago.component';
 import { PruebaComponent } from './paginas/prueba/prueba.component';
+import { ModalComponent } from './componentes/modal/modal.component';
 
 @NgModule({
   declarations: [
@@ -37,7 +38,8 @@ import { PruebaComponent } from './paginas/prueba/prueba.component';
     ListadoFuturosComponent,
     LoginComponent,
     ControlpagoComponent,
-    PruebaComponent
+    PruebaComponent,
+    ModalComponent
   ],
   imports: [
     BrowserModule,
