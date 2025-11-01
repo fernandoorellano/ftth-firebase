@@ -43,31 +43,59 @@ export class ListadofireService {
       this.data.eliminarDatos(abonado);
     }
 
+    controlPagos(pago: string, mesAnterior: string, mesActual: string){
+      if(mesAnterior != 'p' && mesAnterior != 'P'){
+            mesAnterior = pago;
+          }else
+      {mesActual = pago;}
+    }
+
     actualizarPago(pago:string, abonado: any){
       switch(this.fechaSer.fechaMesActualNumerica){
-           case 5:
+          case 5:
             abonado.pagoMayo = pago;
           break;
           case 6:
-            abonado.pagoJunio = pago;
+          if(abonado.pagoMayo != 'p' && abonado.pagoMayo != 'P'){
+              abonado.pagoMayo = pago;
+            }else
+            {abonado.pagoJunio = pago;}
           break;
           case 7:
-            abonado.pagoJulio = pago;
+            if(abonado.pagoJunio != 'p' && abonado.pagoJunio != 'P'){
+              abonado.pagoJunio = pago;
+            }else
+            {abonado.pagoJulio = pago;}
           break;
-          case 8: 
-            abonado.pagoAgosto = pago;
+          case 8:
+              if(abonado.pagoJulio != 'p' && abonado.pagoJulio != 'P'){
+              abonado.pagoJulio = pago;
+            }else
+            {abonado.pagoAgosto = pago;}
           break;
           case 9:
-            abonado.pagoSeptiembre = pago;
+            if(abonado.pagoAgosto != 'p' && abonado.pagoAgosto != 'P'){
+              abonado.pagoAgosto = pago;
+            }else
+            {abonado.pagoSeptiembre = pago;}
           break;
           case 10:
-            abonado.pagoOctubre = pago;
+            if(abonado.pagoSeptiembre != 'p' && abonado.pagoSeptiembre != 'P'){
+              abonado.pagoSeptiembre = pago;
+            }else
+            {abonado.pagoOctubre = pago;}
           break;
-          case 11: 
-            abonado.pagoNoviembre = pago;
+          case 11:
+            if(abonado.pagoOctubre != 'p' && abonado.pagoOctubre != 'P'){
+              abonado.pagoOctubre = pago;
+            }else
+            {abonado.pagoNoviembre = pago;}
           break;
-          case 12: 
-            abonado.pagoDiciembre = pago;
+          case 12:
+            if(abonado.pagoNoviembre != 'p' && abonado.pagoNoviembre != 'P'){
+              abonado.pagoNoviembre = pago;
+            }else
+            {abonado.pagoDiciembre = pago;}
           break;
       }
       this.actualizarAbonado(abonado, abonado.fecha);

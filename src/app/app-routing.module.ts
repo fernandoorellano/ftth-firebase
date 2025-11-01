@@ -16,7 +16,7 @@ const routes: Routes = [
     {path: "edicion", canActivate: [VerificarGuard], component: EdicionComponent},
     {path: "crear", canActivate: [VerificarGuard], component: CrearComponent},
     {path: "login", component: LoginComponent},
-    {path: "controlpagos", canActivate: [VerificarGuard],component: ControlpagoComponent},
+    {path: "controlpagos", component: ControlpagoComponent},
     {path: "prueba", component: PruebaComponent}
   ];
 
